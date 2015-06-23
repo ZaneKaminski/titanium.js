@@ -5,7 +5,7 @@
                 "Zane Kaminski <zanekaminski@gmail.com>"
                 ],
     "description": "jQuery plugin implementing hiding title bars above the boostrap navbar.",
-    "main": "titanium.js",
+    "main": ["titanium.js", "titanium.min.js"],
     "keywords": ["jquery", "titanium", "title", "title bar", "navbar"],
     "license": "MIT",
     "dependencies": {
