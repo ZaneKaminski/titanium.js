@@ -4,8 +4,8 @@
         var navbar = this;
         
         if (action == 'refresh') {
-            var titlebar = navbar.before();
-            if (this.before().inView('any') === true) {
+            var titlebar = navbar.prev();
+            if (titlebar.inView('any') === true) {
                 titlebar.css({ paddingBottom: 0 });
                 navbar.addClass('navbar-static-top').removeClass('navbar-fixed-top');
             } else {
