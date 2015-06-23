@@ -5,7 +5,7 @@
         
         if (action == 'refresh') {
             var titlebar = navbar.prev();
-            if (titlebar.inView('any') === true) {
+            if (titlebar.inView('any') === true && titlebar.height() > 0) {
                 titlebar.css({ marginBottom: 0 });
                 navbar.addClass('navbar-static-top').removeClass('navbar-fixed-top');
             } else {
