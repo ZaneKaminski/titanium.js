@@ -3,16 +3,16 @@
 
 module.exports = function (grunt) {
     grunt.initConfig({
-          uglify: {
-              options: {
-                  mangle: false
-              },
-          build: {
-              files: {
-                  'titanium.min.js': ['titanium.js']
-              }
-          }
-      }
+        uglify: {
+            options: {
+                mangle: false
+            },
+            build: {
+                files: {
+                'titanium.min.js': ['titanium.js']
+                }
+            }
+        }
     });
 
     grunt.registerTask('default', 'uglify:build');   
