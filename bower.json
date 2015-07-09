@@ -2,8 +2,8 @@
     "name": "titanium.js",
     "version": "1.0.0",
     "authors": [
-                "Zane Kaminski <zanekaminski@gmail.com>"
-                ],
+        "Zane Kaminski <zanekaminski@gmail.com>"
+    ],
     "description": "jQuery plugin implementing hiding title bars above the boostrap navbar.",
     "main": ["titanium.js", "titanium.min.js"],
     "keywords": ["jquery", "titanium", "title", "title bar", "navbar"],
@@ -16,11 +16,11 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/ZaneKaminski/titanium.js.git"
-     },
+    },
     "ignore": [
-               "**/.*",
-               "node_modules",
-               "bower_components",
-               "typings"
-               ]
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "typings"
+    ]
 }

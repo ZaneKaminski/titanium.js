@@ -1,7 +1,6 @@
-// This file in the main entry point for defining grunt tasks and using grunt plugins.
-// Click here to learn more. http://go.microsoft.com/fwlink/?LinkID=513275&clcid=0x409
-
-module.exports = function (grunt) {
+/*eslint-env node */
+module.exports = function(grunt) {
+    "use strict";
     grunt.initConfig({
         uglify: {
             options: {
@@ -9,13 +8,38 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                'titanium.min.js': ['titanium.js']
+                    "build/titanium.min.js": ["js/titanium.js"]
                 }
+            }
+        },
+
+        less: {
+            build: {
+                options: {
+
+                },
+                files: {
+                    "build/titanium.css": "less/titanium.less"
+                }
+            }
+        },
+
+        watch: {
+            js: {
+                files: ["js/**/*"],
+                tasks: ["uglify:build"]
+            },
+
+            less: {
+                files: ["less/**/*"],
+                tasks: ["less:build"]
             }
         }
     });
 
-    grunt.registerTask('default', 'uglify:build');   
+    grunt.registerTask("default", ["uglify:build", "less:build"]);
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.loadNpmTasks("grunt-contrib-less");
+    grunt.loadNpmTasks("grunt-contrib-watch");
 };

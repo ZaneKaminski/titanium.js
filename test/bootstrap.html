@@ -6,6 +6,7 @@
 	<script src="../bower_components/inview.js/inview.min.js"></script>
 	<script src="../build/titanium.min.js"></script>
 	<link rel="stylesheet" href="../build/titanium.css"></link>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
 	<style type="text/css">
 		body {
 			margin: 0;
@@ -19,7 +20,13 @@
 			<br/>This is...
 			<br/>the titlebar!</div>
 		<nav class="ti-navbar">
-			<ul>
+			<ul class="d-horizontal m-horizontal">
+				<li>NotLink</li>
+				<li class="disabled">NotLink/D</li>
+				<li><a href="http://google.com">Link</a></li>
+				<li class="disabled"><a href="http://google.com">Link/D</a></li>
+			</ul>
+			<ul class="d-horizontal m-vertical">
 				<li>NotLink</li>
 				<li class="disabled">NotLink/D</li>
 				<li><a href="http://google.com">Link</a></li>

@@ -1,0 +1,86 @@
+/* Colors */
+@ti-bg-color: #f0f;
+@ti-titlebar-bg-color: #bbb;
+@ti-navbar-bg-color: #ddd;
+@ti-link-color: Black;
+@ti-link-disabled-color: #ccc;
+/* Padding and Spacing */
+@ti-navbar-item-padding: 10px;
+@ti-navbar-edge-padding: 5px;
+@ti-navbar-collapsed-item-padding: 10px;
+@ti-navbar-collapsed-edge-padding: 5px;
+
+.ti {
+    width: 100%;
+    background-color: @ti-bg-color;
+
+    .ti-titlebar {
+        width: 100%;
+        background-color: @ti-titlebar-bg-color;
+    }
+
+    .ti-navbar {
+        width: 100%;
+        background-color: @ti-navbar-bg-color;
+
+        ul {
+            margin: 0;
+            padding-left: @ti-navbar-edge-padding;
+            pading-right: @ti-navbar-edge-padding;
+
+            li {
+                padding: @ti-navbar-item-padding;
+                .NavbarItemColor(@ti-link-color);
+            }
+            li.disabled {
+                .NavbarItemColor(@ti-link-disabled-color);
+            }
+        }
+
+        @media (max-width: 767px) {
+            ul.m-horizontal {
+                display: inline-block;
+                li {
+                    display:inline-block;
+                }
+            }
+
+            ul.m-vertical {
+                display: block;
+                li {
+                    display:block;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            ul.d-horizontal {
+                display: inline-block;
+                li {
+                    display:inline-block;
+                }
+            }
+
+            ul.d-vertical {
+                display: block;
+                li {
+                    display:block;
+                }
+            }
+        }
+    }
+
+    /* Fixed navbar when the page scrolls down */
+    .ti-navbar.ti-navbar-fixed {
+        position: fixed;
+        top: 0;
+    }
+}
+
+.NavbarItemColor(@color) {
+    color: @color;
+    a {
+        text-decoration: none;
+        color: @color;
+    }
+}
